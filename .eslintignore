@@ -1,0 +1,6 @@
+node_modules/
+.husky
+.next
+next.config.js
+package.json
+package-lock.json
