@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+// https://bootiful.org/blog/nextjs-bootstrap [reference]
 
 export default function Home() {
   return (
