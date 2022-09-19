@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "airbnb_bd";
+  src: url("../../utility/airbnb-cereal/AirbnbCereal_W_Bd.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "airbnb_bk";
+  src: url("../../utility//airbnb-cereal/AirbnbCereal_W_Bk.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "airbnb_blk";
+  src: url("../../utility//airbnb-cereal/AirbnbCereal_W_Blk.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "airbnb_lt";
+  src: url("../../utility//airbnb-cereal/AirbnbCereal_W_Lt.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "airbnb_md";
+  src: url("../../utility//airbnb-cereal/AirbnbCereal_W_Md.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "airbnb_xbd";
+  src: url("../../utility//airbnb-cereal/AirbnbCereal_W_XBd.otf")
+    format("opentype");
+}
+
+/*
+* All typography here
+*/
+$airbnb-bd: "airbnb_bd";
+$airbnb-bk: "airbnb_bk";
+$airbnb-blk: "airbnb_blk";
+$airbnb-lt: "airbnb_lt";
+$airbnb-md: "airbnb_md";
+$airbnb-xbd: "airbnb_xbd";
