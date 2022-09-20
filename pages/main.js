@@ -1,13 +1,18 @@
 import Stack from "react-bootstrap/Stack";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import styles from "../styles/Main.module.scss";
 import ListGroup from "react-bootstrap/ListGroup";
-import Alert from "react-bootstrap/Alert";
+import { useRouter } from "next/router";
 
 export default function main() {
+  const router = useRouter();
+
+  const goToEditPage = () => {
+    router.push("/contract");
+    console.log("routing");
+  };
   return (
     <Stack direction="vertical" className={styles.mainBody} gap={2}>
       <Row className={styles.header} xs="auto">
@@ -32,7 +37,7 @@ export default function main() {
       </Row>
 
       <Row className={styles.createContractButtonBox}>
-        <Button className={styles.createContractButton}>
+        <Button className={styles.createContractButton} onClick={goToEditPage}>
           Create New Contract
         </Button>
       </Row>
