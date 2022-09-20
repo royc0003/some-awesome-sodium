@@ -45,6 +45,9 @@ export default function contract() {
           </ButtonGroup>
         </div>
       </div>
+      <div className={styles.toggleDrawer}>
+        <h1 className={styles.toggleFont}>≡</h1>
+      </div>
 
       <Row className={styles.listing}>
         <Row className={styles.listingTitle}>Your allocation</Row>
