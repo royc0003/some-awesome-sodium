@@ -17,7 +17,7 @@ export default function contract() {
   const [radioValue, setRadioValue] = useState("1");
   const [toast, setToast] = useState(false);
   const [showDrawer, setShowDrawer] = useState(false);
-  const [currency, setCurrency] = useState("1");
+  const [currency, setCurrency] = useState("Eth");
 
   const toggleToast = () => {
     setToast(!toast);
@@ -49,7 +49,7 @@ export default function contract() {
             <h3>Your balance</h3>
           </Col>
           <Col>
-            <h3>xxxxx</h3>
+            <h3>xxxxx {currency}</h3>
           </Col>
         </Row>
         <div className={styles.divider}></div>
@@ -121,41 +121,41 @@ export default function contract() {
         <Offcanvas.Body>
           <ListGroup>
             <ListGroup.Item
-              onClick={() => setCurrency("1")}
+              onClick={() => setCurrency("Eth")}
               style={{
-                backgroundColor: `${currency === "1" ? "#ff9396" : "#fff"}`,
+                backgroundColor: `${currency === "Eth" ? "#ff9396" : "#fff"}`,
               }}
             >
               Eth
             </ListGroup.Item>
             <ListGroup.Item
-              onClick={() => setCurrency("2")}
+              onClick={() => setCurrency("Eth1")}
               style={{
-                backgroundColor: `${currency === "2" ? "#ff9396" : "#fff"}`,
+                backgroundColor: `${currency === "Eth1" ? "#ff9396" : "#fff"}`,
               }}
             >
               Something
             </ListGroup.Item>
             <ListGroup.Item
-              onClick={() => setCurrency("3")}
+              onClick={() => setCurrency("Eth2")}
               style={{
-                backgroundColor: `${currency === "3" ? "#ff9396" : "#fff"}`,
+                backgroundColor: `${currency === "Eth2" ? "#ff9396" : "#fff"}`,
               }}
             >
               Morbi leo risus
             </ListGroup.Item>
             <ListGroup.Item
-              onClick={() => setCurrency("4")}
+              onClick={() => setCurrency("Eth3")}
               style={{
-                backgroundColor: `${currency === "4" ? "#ff9396" : "#fff"}`,
+                backgroundColor: `${currency === "Eth3" ? "#ff9396" : "#fff"}`,
               }}
             >
               Porta ac consectetur ac
             </ListGroup.Item>
             <ListGroup.Item
-              onClick={() => setCurrency("5")}
+              onClick={() => setCurrency("Eth4")}
               style={{
-                backgroundColor: `${currency === "5" ? "#ff9396" : "#fff"}`,
+                backgroundColor: `${currency === "Eth4" ? "#ff9396" : "#fff"}`,
               }}
             >
               Vestibulum at eros
