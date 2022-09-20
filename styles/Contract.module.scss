@@ -1,0 +1,26 @@
+@use 'base/typography';
+@use 'base/colors';
+
+
+/*
+Sass for contract page
+*/
+.mainBody {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: typography.$airbnb-md;
+    color: colors.$black-main;
+}
+
+.header {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+.divider {
+    border-bottom: 1px solid lightgray;
+    flex-grow: 1;
+    width: 100%;
+  }

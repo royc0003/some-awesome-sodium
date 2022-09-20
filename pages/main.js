@@ -11,7 +11,6 @@ export default function main() {
 
   const goToEditPage = () => {
     router.push("/contract");
-    console.log("routing");
   };
   return (
     <Stack direction="vertical" className={styles.mainBody} gap={2}>
