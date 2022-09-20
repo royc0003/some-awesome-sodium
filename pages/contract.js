@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import ToggleButton from "react-bootstrap/ToggleButton";
 import Stack from "react-bootstrap/Stack";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -5,6 +8,8 @@ import styles from "../styles/Contract.module.scss";
 import ListGroup from "react-bootstrap/ListGroup";
 
 export default function contract() {
+  const [checked, setChecked] = useState(false);
+  const [radioValue, setRadioValue] = useState("1");
   return (
     <Stack direction="vertical" className={styles.mainBody} gap={4}>
       <div className={styles.header}>
@@ -17,7 +22,30 @@ export default function contract() {
           </Col>
         </Row>
         <div className={styles.divider}></div>
+        <div className={styles.toggleButtonGroup}>
+          <ButtonGroup>
+            <ToggleButton
+              type="radio"
+              name="radio"
+              value={"1"}
+              checked={radioValue === "1"}
+              onClick={() => setRadioValue("1")}
+            >
+              Enable
+            </ToggleButton>
+            <ToggleButton
+              type="radio"
+              name="radio"
+              value={"2"}
+              checked={radioValue === "2"}
+              onClick={() => setRadioValue("2")}
+            >
+              Disable
+            </ToggleButton>
+          </ButtonGroup>
+        </div>
       </div>
+
       <Row className={styles.listing}>
         <Row className={styles.listingTitle}>Your allocation</Row>
         <ListGroup>
