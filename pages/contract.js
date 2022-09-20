@@ -17,6 +17,7 @@ export default function contract() {
   const [radioValue, setRadioValue] = useState("1");
   const [toast, setToast] = useState(false);
   const [showDrawer, setShowDrawer] = useState(false);
+  const [currency, setCurrency] = useState("1");
 
   const toggleToast = () => {
     setToast(!toast);
@@ -37,6 +38,8 @@ export default function contract() {
       message: "Press #{key} to copy",
     });
   };
+
+  const handleCurrencyClick = () => {};
 
   return (
     <Stack direction="vertical" className={styles.mainBody} gap={5}>
@@ -117,13 +120,46 @@ export default function contract() {
         </Offcanvas.Body>
         <Offcanvas.Body>
           <ListGroup>
-            <ListGroup.Item style={{ backgroundColor: "#ff9396" }}>
+            <ListGroup.Item
+              onClick={() => setCurrency("1")}
+              style={{
+                backgroundColor: `${currency === "1" ? "#ff9396" : "#fff"}`,
+              }}
+            >
               Eth
             </ListGroup.Item>
-            <ListGroup.Item>Something</ListGroup.Item>
-            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+            <ListGroup.Item
+              onClick={() => setCurrency("2")}
+              style={{
+                backgroundColor: `${currency === "2" ? "#ff9396" : "#fff"}`,
+              }}
+            >
+              Something
+            </ListGroup.Item>
+            <ListGroup.Item
+              onClick={() => setCurrency("3")}
+              style={{
+                backgroundColor: `${currency === "3" ? "#ff9396" : "#fff"}`,
+              }}
+            >
+              Morbi leo risus
+            </ListGroup.Item>
+            <ListGroup.Item
+              onClick={() => setCurrency("4")}
+              style={{
+                backgroundColor: `${currency === "4" ? "#ff9396" : "#fff"}`,
+              }}
+            >
+              Porta ac consectetur ac
+            </ListGroup.Item>
+            <ListGroup.Item
+              onClick={() => setCurrency("5")}
+              style={{
+                backgroundColor: `${currency === "5" ? "#ff9396" : "#fff"}`,
+              }}
+            >
+              Vestibulum at eros
+            </ListGroup.Item>
           </ListGroup>
         </Offcanvas.Body>
         <Offcanvas.Body>
