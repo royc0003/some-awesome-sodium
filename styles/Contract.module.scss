@@ -44,16 +44,25 @@ Sass for contract page
 }
 
 .withdrawButtonGroup {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
-
 .withdrawButton {
-    background-color: colors.$pink;
-    border-color: colors.$pink;
+  background-color: colors.$pink;
+  border-color: colors.$pink;
 }
 
 .withdrawButton:hover {
-    background-color: colors.$pink-lighter !important;
-    border-color: colors.$pink-lighter !important;
+  background-color: colors.$pink-lighter !important;
+  border-color: colors.$pink-lighter !important;
+}
+
+.clipBoard {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    padding-right: 50px;
+}
+.clipBoardUrl {
+    padding-top: 8px;
 }

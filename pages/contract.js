@@ -7,14 +7,31 @@ import Col from "react-bootstrap/Col";
 import styles from "../styles/Contract.module.scss";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
+import copy from "copy-to-clipboard";
+import Toast from "react-bootstrap/Toast";
 
 export default function contract() {
+  const [urlText, setUrlText] = useState("https://something...");
   const [checked, setChecked] = useState(false);
   const [radioValue, setRadioValue] = useState("1");
+  const [toast, setToast] = useState(false);
+
+  const toggleToast = () => {
+    setToast(!toast);
+  };
 
   const openDrawer = () => {
     console.log("opening drawer");
   };
+
+  const copyToClipBoard = () => {
+    toggleToast();
+    copy(urlText, {
+      debug: true,
+      message: "Press #{key} to copy",
+    });
+  };
+
   return (
     <Stack direction="vertical" className={styles.mainBody} gap={5}>
       <div className={styles.header}>
@@ -67,6 +84,23 @@ export default function contract() {
       <Row className={styles.withdrawButtonGroup}>
         <Button className={styles.withdrawButton}>Withdraw</Button>
       </Row>
+
+      <Row className={styles.clipBoard} xs="auto">
+        <Col>
+          <Button onClick={copyToClipBoard}> Click to copy</Button>
+        </Col>
+        <Col className={styles.clipBoardUrl}>
+          <p>{urlText ? urlText : "test"}</p>
+        </Col>
+      </Row>
+
+      <Toast show={toast} onClose={toggleToast}>
+        <Toast.Header>
+          <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+          <strong className="me-auto">Awesome-Sodium</strong>
+        </Toast.Header>
+        <Toast.Body>Successfully copied!</Toast.Body>
+      </Toast>
     </Stack>
   );
 }
