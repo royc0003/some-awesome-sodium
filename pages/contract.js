@@ -9,19 +9,25 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import copy from "copy-to-clipboard";
 import Toast from "react-bootstrap/Toast";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
 export default function contract() {
   const [urlText, setUrlText] = useState("https://something...");
   const [checked, setChecked] = useState(false);
   const [radioValue, setRadioValue] = useState("1");
   const [toast, setToast] = useState(false);
+  const [showDrawer, setShowDrawer] = useState(false);
 
   const toggleToast = () => {
     setToast(!toast);
   };
 
   const openDrawer = () => {
-    console.log("opening drawer");
+    setShowDrawer(true);
+  };
+
+  const closeDrawer = () => {
+    setShowDrawer(false);
   };
 
   const copyToClipBoard = () => {
@@ -101,6 +107,29 @@ export default function contract() {
         </Toast.Header>
         <Toast.Body>Successfully copied!</Toast.Body>
       </Toast>
+
+      <Offcanvas show={showDrawer} onHide={closeDrawer}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Configuration</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          Select the currency you would like to use:
+        </Offcanvas.Body>
+        <Offcanvas.Body>
+          <ListGroup>
+            <ListGroup.Item style={{ backgroundColor: "#ff9396" }}>
+              Eth
+            </ListGroup.Item>
+            <ListGroup.Item>Something</ListGroup.Item>
+            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+          </ListGroup>
+        </Offcanvas.Body>
+        <Offcanvas.Body>
+          <Button className={styles.withdrawButton}>Destroy</Button>
+        </Offcanvas.Body>
+      </Offcanvas>
     </Stack>
   );
 }
