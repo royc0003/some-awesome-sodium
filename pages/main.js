@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import styles from "../styles/Main.module.scss";
 import ListGroup from "react-bootstrap/ListGroup";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function main() {
   const router = useRouter();
@@ -27,7 +28,9 @@ export default function main() {
       <Row className={styles.listing}>
         <Row className={styles.listingTitle}>Your contracts</Row>
         <ListGroup>
-          <ListGroup.Item>Cras justo odio</ListGroup.Item>
+          <ListGroup.Item>
+            <Link href={`/contract?addr=Crasjustoodio`}>Crasjustoodio</Link>
+          </ListGroup.Item>
           <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
           <ListGroup.Item>Morbi leo risus</ListGroup.Item>
           <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>

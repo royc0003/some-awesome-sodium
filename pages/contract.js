@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import ToggleButton from "react-bootstrap/ToggleButton";
 import Stack from "react-bootstrap/Stack";
@@ -10,14 +10,21 @@ import Button from "react-bootstrap/Button";
 import copy from "copy-to-clipboard";
 import Toast from "react-bootstrap/Toast";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { useRouter } from "next/router";
 
 export default function contract() {
-  const [urlText, setUrlText] = useState("https://something...");
+  const [urlText, setUrlText] = useState("https://something../");
   const [checked, setChecked] = useState(false);
   const [radioValue, setRadioValue] = useState("1");
   const [toast, setToast] = useState(false);
   const [showDrawer, setShowDrawer] = useState(false);
   const [currency, setCurrency] = useState("Eth");
+  const router = useRouter();
+  const { addr } = router.query;
+
+  useEffect(() => {
+    setUrlText(`https://something?addr=${addr}`);
+  }, []);
 
   const toggleToast = () => {
     setToast(!toast);
