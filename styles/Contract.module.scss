@@ -42,3 +42,18 @@ Sass for contract page
   font-size: 70px;
   padding-left: 50px;
 }
+
+.withdrawButtonGroup {
+    margin-top: 20px;
+}
+
+
+.withdrawButton {
+    background-color: colors.$pink;
+    border-color: colors.$pink;
+}
+
+.withdrawButton:hover {
+    background-color: colors.$pink-lighter !important;
+    border-color: colors.$pink-lighter !important;
+}

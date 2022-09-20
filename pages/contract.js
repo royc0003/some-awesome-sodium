@@ -6,12 +6,17 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import styles from "../styles/Contract.module.scss";
 import ListGroup from "react-bootstrap/ListGroup";
+import Button from "react-bootstrap/Button";
 
 export default function contract() {
   const [checked, setChecked] = useState(false);
   const [radioValue, setRadioValue] = useState("1");
+
+  const openDrawer = () => {
+    console.log("opening drawer");
+  };
   return (
-    <Stack direction="vertical" className={styles.mainBody} gap={4}>
+    <Stack direction="vertical" className={styles.mainBody} gap={5}>
       <div className={styles.header}>
         <Row className={styles.header} xs="auto">
           <Col>
@@ -45,7 +50,7 @@ export default function contract() {
           </ButtonGroup>
         </div>
       </div>
-      <div className={styles.toggleDrawer}>
+      <div className={styles.toggleDrawer} onClick={openDrawer}>
         <h1 className={styles.toggleFont}>≡</h1>
       </div>
 
@@ -58,6 +63,9 @@ export default function contract() {
           <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
           <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
         </ListGroup>
+      </Row>
+      <Row className={styles.withdrawButtonGroup}>
+        <Button className={styles.withdrawButton}>Withdraw</Button>
       </Row>
     </Stack>
   );
