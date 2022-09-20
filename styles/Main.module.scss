@@ -28,7 +28,7 @@ Sass for main page
 .createContractButtonBox {
     position: fixed;
     bottom: 0;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
 }
 
 .createContractButton {
@@ -39,4 +39,12 @@ Sass for main page
 .createContractButton:hover {
     background-color: colors.$pink-lighter !important;
     border-color: colors.$pink-lighter !important;
+}
+
+.listing {
+    margin-top: 5%;
+}
+
+.listingTitle {
+    margin-bottom: 10px;
 }

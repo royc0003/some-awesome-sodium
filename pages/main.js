@@ -4,6 +4,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import styles from "../styles/Main.module.scss";
+import ListGroup from "react-bootstrap/ListGroup";
+import Alert from "react-bootstrap/Alert";
 
 export default function main() {
   return (
@@ -17,6 +19,17 @@ export default function main() {
         </Col>
       </Row>
       <div className={styles.divider}></div>
+
+      <Row className={styles.listing}>
+        <Row className={styles.listingTitle}>Your contracts</Row>
+        <ListGroup>
+          <ListGroup.Item>Cras justo odio</ListGroup.Item>
+          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+          <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+          <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        </ListGroup>
+      </Row>
 
       <Row className={styles.createContractButtonBox}>
         <Button className={styles.createContractButton}>
