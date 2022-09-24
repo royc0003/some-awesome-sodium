@@ -1,0 +1,68 @@
+@use "base/typography";
+@use "base/colors";
+
+/*
+Sass for contract page
+*/
+.mainBody {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: typography.$airbnb-md;
+  color: colors.$black-main;
+}
+
+.header {
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+}
+.divider {
+  border-bottom: 1px solid lightgray;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.toggleButtonGroup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 30px;
+  padding-right: 50px;
+}
+
+.toggleDrawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.toggleFont {
+  font-size: 70px;
+  padding-left: 50px;
+}
+
+.withdrawButtonGroup {
+  margin-top: 20px;
+}
+
+.withdrawButton {
+  background-color: colors.$pink;
+  border-color: colors.$pink;
+}
+
+.withdrawButton:hover {
+  background-color: colors.$pink-lighter !important;
+  border-color: colors.$pink-lighter !important;
+}
+
+.clipBoard {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    padding-right: 50px;
+}
+.clipBoardUrl {
+    padding-top: 8px;
+}

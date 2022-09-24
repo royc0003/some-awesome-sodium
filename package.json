@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.1",
-    "next": "^12.2.4",
+    "clipboard": "^2.0.11",
+    "copy-to-clipboard": "^3.3.2",
+    "next": "12.2.4",
     "react": "18.2.0",
     "react-bootstrap": "^2.5.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "18.2.0",
+    "react-web-vector-icons": "^1.0.2",
     "typescript": "^4.7.4"
   },
   "devDependencies": {
