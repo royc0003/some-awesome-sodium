@@ -15,19 +15,45 @@ export default function login() {
         router.push("/main");
     }
     return(
-        <Stack direction="vertical" className={styles.mainBody} gap={2}>
-        <Row className={styles.header} xs="auto">
-            <Col>
-            <h3>Your address</h3>
-            </Col>
-            <Col>
-            <h3>xxxxx</h3>
-            </Col>
-        </Row>
+    <div className = {styles.background}>
+    <Stack direction="vertical" className={styles.mainBody} gap={2}>
+      <Row className={styles.header} xs="auto">
+        <Col className={styles.left}>
+          <p className = {styles.donan} >DONAN</p>
+        </Col>
+        <Col className={styles.left}>
+          <p>Home</p>
+        </Col>
+        <Col className={styles.left}>
+          <p>Causes</p>
+        </Col>
+        <Col className={styles.left}>
+          <p>About</p>
+        </Col>
+        <Col className={styles.right}>
+            <Button>
+            <p>Donate Now</p>
+            </Button>
+        </Col>
+        
+      </Row>
+      <div></div>
 
-        </Stack>
+      <Row className={styles.description}>
+        <p className={styles.title}>Donate Anonymously</p>
+        <p className={styles.slogan}>Untraceable donations to the cause you care about most.</p>
+      </Row>
 
+      <Row>
+      <Button>
+            <p>Donate Now</p>
+            </Button>
+      </Row>
+        
 
-    );
+      
+    </Stack>
+    </div>
+  );
     
 }

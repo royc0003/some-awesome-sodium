@@ -10,13 +10,14 @@ Sass for main page
     justify-content: center;
     align-items: center;
     font-family: typography.$airbnb-md;
-    color: colors.$black-main;
+    color: colors.$white;
 }
 
 .header {
     margin-top: 20px;
     width: 100%;
     justify-content: center;
+    color: colors.$white;
 }
 
 .divider {
@@ -47,4 +48,5 @@ Sass for main page
 
 .listingTitle {
     margin-bottom: 10px;
+    color: colors.$white;
 }
