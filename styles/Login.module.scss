@@ -1,0 +1,89 @@
+@use 'base/typography';
+@use 'base/colors';
+
+/*
+Edits for login page
+*/
+.mainBody {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    font-family: typography.$airbnb-md;
+}
+
+.header {
+    margin-top: 40px;
+    width: 100%;
+    color: colors.$white;
+    vertical-align: middle;
+}
+
+.left{
+    float: left;
+    margin-left: 80px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    justify-content: left;
+    padding-top: 10px;
+
+}
+
+.donan{
+    color: #1771C3;
+    margin-left: 80px;
+    font-size: 20px;
+    justify-content: left;
+    float: left;
+    padding-top: 10px;
+}
+
+.right{
+    float: right;
+    margin-right: 60px;
+    justify-content: right;
+    margin-bottom: 0px;
+}
+
+.description{
+    justify-content: center;
+    margin-top: 15%;
+}
+
+.title{
+    font-size: 60px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.slogan{
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.donateButton {
+    text-align: center;
+    vertical-align: middle;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 25px;
+    width: 140px;
+    font-size: 16px;
+    background-color: #1771C3;
+}
+
+.learnMore{
+    text-align: center;
+    vertical-align: middle;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 25px;
+    width: 140px;
+    font-size: 16px;
+
+}
