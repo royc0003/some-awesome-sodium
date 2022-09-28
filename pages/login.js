@@ -1,9 +1,9 @@
 import Stack from "react-bootstrap/Stack";
 import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import styles from "../styles/Login.module.scss";
-import ListGroup from "react-bootstrap/ListGroup";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -17,36 +17,43 @@ export default function login() {
     return(
     <div className = {styles.background}>
     <Stack direction="vertical" className={styles.mainBody} gap={2}>
-      <Row className={styles.header} xs="auto">
-        <Col className={styles.left}>
-          <p className = {styles.donan} >DONAN</p>
+      
+      <Container className={styles.header} xs="auto">
+        <Col className = {styles.donan}>
+          DONAN
         </Col>
         <Col className={styles.left}>
-          <p>Home</p>
+          Home
         </Col>
         <Col className={styles.left}>
-          <p>Causes</p>
+          Causes
         </Col>
         <Col className={styles.left}>
-          <p>About</p>
+          About
+        </Col>
+        <Col md="auto">
         </Col>
         <Col className={styles.right}>
-            <Button>
-            <p>Donate Now</p>
+            <Button size="sm" className={styles.donateButton}>
+            Donate Now
             </Button>
         </Col>
         
-      </Row>
+      </Container>
       <div></div>
 
       <Row className={styles.description}>
-        <p className={styles.title}>Donate Anonymously</p>
+        <p className={styles.title}><span style={{color: "#1771C3"}} >Don</span>ate <span style={{color: "#1771C3"}}>An</span>onymously</p>
         <p className={styles.slogan}>Untraceable donations to the cause you care about most.</p>
       </Row>
 
       <Row>
-      <Button>
-            <p>Donate Now</p>
+      <Button className={styles.donateButton}>
+            Donate Now
+            </Button>
+            <div style={{width: "40px"}}></div>
+      <Button variant="outline-light" className={styles.learnMore}>
+            Learn More
             </Button>
       </Row>
         
